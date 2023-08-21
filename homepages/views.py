@@ -9,7 +9,7 @@ def index(request):
     html = f"""
     <html>
         <body>
-            <h1>SC COBA!</h1>
+            <h1>SC COBA! ADD REQ ADD EEQ</h1>
             <p>The current time is { now }.</p>
         </body>
     </html>
