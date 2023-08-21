@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "homepages",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,16 @@ WSGI_APPLICATION = "vercel_app.wsgi.app"
 # Note: Django modules for using databases are not support in serverless
 # environments like Vercel. You can use a database over HTTP, hosted elsewhere.
 
-DATABASES = {}
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "scanocular",
+        "USER": "root",
+        "PASSWORD": "",
+        "HOST": "localhost",  # Change this if your MySQL server is on a different host
+        "PORT": "3306",  # Change this if your MySQL server is using a different port
+    }
+}
 
 
 # Password validation
